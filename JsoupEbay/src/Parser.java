@@ -41,7 +41,7 @@ public class Parser {
 					finalPrice.add(Double.parseDouble(basePrice.get(i)));
 				}
 				else {
-					finalPrice.add(Double.parseDouble(basePrice.get(i)) + Double.parseDouble(shipPrice.get(i)));
+					finalPrice.add(Double.parseDouble(basePrice.get(i).replaceAll("[\\D]", "")) + Double.parseDouble(shipPrice.get(i).replaceAll("[\\D]", "")));
 				}
 				i++;
 			}
