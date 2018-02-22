@@ -45,7 +45,7 @@ public class Parser {
 				}
 				
 			}
-			//Right now shipping costs are not adding
+			//Right now shipping costs are not adding, do a println with shipping costs later in order to determine if they register at all.
 			
 			int i = 0;
 			for (Element listing: title) {
