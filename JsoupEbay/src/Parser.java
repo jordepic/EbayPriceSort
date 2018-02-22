@@ -36,20 +36,21 @@ public class Parser {
 			//Could be impossible to parse due to $
 			//https://stackoverflow.com/questions/16787099/how-to-split-the-string-into-string-and-integer-in-java use this to break string up
 			
-			for (int i = 0; i < shipPrice.size(); i++) {
-				if (shipPrice.get(i).equals(("Free Shipping"))) {
-					finalPrice.add(Double.parseDouble(basePrice.get(i)));
+			for (int i = 0; i < shipPrice.size() - 1; i++) {
+				if (shipPrice.get(i).replaceAll("[\\D]", "").equals("")) {
+					finalPrice.add(Double.parseDouble(basePrice.get(i).replaceAll("[\\D]", ""))/100.);
 				}
 				else {
-					finalPrice.add(Double.parseDouble(basePrice.get(i).replaceAll("[\\D]", "")) + Double.parseDouble(shipPrice.get(i).replaceAll("[\\D]", "")));
+					finalPrice.add(Double.parseDouble(basePrice.get(i).replaceAll("[\\D]", ""))/100. + Double.parseDouble(shipPrice.get(i).replaceAll("[\\D]", ""))/100.);
 				}
-				i++;
+				
 			}
+			//Right now shipping costs are not adding
 			
 			int i = 0;
 			for (Element listing: title) {
 				if (finalPrice.get(i) < myMax) {
-					System.out.println(listing.getElementsByTag("a").first().text() + (finalPrice.get(i)));
+					System.out.println(listing.getElementsByTag("a").first().text() + "      " + (finalPrice.get(i)));
 				}
 				
 				i++;
