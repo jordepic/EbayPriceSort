@@ -33,8 +33,8 @@ public class Parser {
 				shipPrice.add(number.getElementsByTag("span").first().text());
 			}
 			
-			//Could be impossible to parse due to $
-			//https://stackoverflow.com/questions/16787099/how-to-split-the-string-into-string-and-integer-in-java use this to break string up
+			//Nice one Jordan, now maybe add a user interface with a separate document, table, time properties, URL
+			
 			
 			for (int i = 0; i < shipPrice.size(); i++) {
 				if (shipPrice.get(i).replaceAll("[\\D]", "").equals("")) {

@@ -2,6 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="JsoupEbay/src"/>
-	<classpathentry kind="lib" path="C:/Users/jordepic/Downloads/jsoup-1.11.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jordan Epstein/Documents/personal website/EbayPriceSort/jsoup-1.11.2.jar"/>
 	<classpathentry kind="output" path="JsoupEbay/bin"/>
 </classpath>
